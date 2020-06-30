@@ -23,7 +23,8 @@ module AfterShip
 				parameters = {
 					:query => query,
 					:body => body.to_json,
-					:header => header
+					:header => header,
+					:ssl_version => :TLSv1_2
 				}
 
 				response = @client.send(http_verb_method, url, parameters)
